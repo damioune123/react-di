@@ -2,11 +2,11 @@ import {User} from "../domain/entities/user.ts";
 import {Context, Effect} from "effect"
 
 export type UserRepository= {
-    listUsers: Effect.Effect<unknown, never, User[]>
+    listUsers: Effect.Effect<never, never, User[]>
 }
 
 export type TranslationRepository = {
-    fetch: Effect.Effect<unknown, never, Record<string, string>>
+    fetch: Effect.Effect<never, never, Record<string, string>>
 }
 export const UserRepository = Context.Tag<UserRepository>('user_management/user_repository');
 
